@@ -1,15 +1,15 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 
-const Blog = () => {
+const Project = () => {
     return (
         <>
             <div>
                 <Navbar />
             </div>
-            <div>Blog</div>
+            <div>Project</div>
         </>
     )
 }
 
-export default Blog
+export default Project

@@ -31,7 +31,7 @@ const Navbar = () => {
                         <NavLink
                             to="/"
                             className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
-                            activeclassname="text-yellow-400"
+
                         >
                             Home
                         </NavLink>
@@ -40,7 +40,7 @@ const Navbar = () => {
                         <NavLink
                             to="/blog"
                             className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
-                            activeclassname="text-yellow-400"
+
                         >
                             Blogs
                         </NavLink>
@@ -49,7 +49,7 @@ const Navbar = () => {
                         <NavLink
                             to="/project"
                             className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
-                            activeclassname="text-yellow-400"
+
                         >
                             Projects
                         </NavLink>
@@ -58,7 +58,7 @@ const Navbar = () => {
                         <NavLink
                             to="/about"
                             className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
-                            activeclassname="text-yellow-400"
+
                         >
                             About Us
                         </NavLink>
@@ -67,7 +67,7 @@ const Navbar = () => {
                         <NavLink
                             to="/contact"
                             className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
-                            activeclassname="text-yellow-400"
+
                         >
                             Contact Us
                         </NavLink>
@@ -89,7 +89,7 @@ const Navbar = () => {
                         <NavLink
                             to="/"
                             className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
-                            activeclassname="text-yellow-400"
+
                             onClick={toggleMenu}
                         >
                             Home
@@ -99,7 +99,7 @@ const Navbar = () => {
                         <NavLink
                             to="/blog"
                             className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
-                            activeclassname="text-yellow-400"
+
                             onClick={toggleMenu}
                         >
                             Blogs
@@ -109,7 +109,7 @@ const Navbar = () => {
                         <NavLink
                             to="/project"
                             className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
-                            activeclassname="text-yellow-400"
+
                             onClick={toggleMenu}
                         >
                             Projects
@@ -119,7 +119,7 @@ const Navbar = () => {
                         <NavLink
                             to="/about"
                             className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
-                            activeclassname="text-yellow-400"
+
                             onClick={toggleMenu}
                         >
                             About Us
@@ -129,7 +129,7 @@ const Navbar = () => {
                         <NavLink
                             to="/contact"
                             className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
-                            activeclassname="text-yellow-400"
+
                             onClick={toggleMenu}
                         >
                             Contact Us
