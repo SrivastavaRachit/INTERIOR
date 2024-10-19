@@ -4,10 +4,16 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isServicesOpen, setIsServicesOpen] = useState(false); // State to handle services dropdown
 
-    // Toggle the menu on small screens
+    // Toggle the mobile menu
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+
+    // Toggle the services dropdown menu
+    const toggleServices = () => {
+        setIsServicesOpen(!isServicesOpen);
     };
 
     return (
@@ -26,12 +32,11 @@ const Navbar = () => {
                 </div>
 
                 {/* Nav Links for larger screens */}
-                <ul className="hidden md:flex space-x-6">
+                <ul className="hidden md:flex space-x-6 items-center">
                     <li>
                         <NavLink
                             to="/"
                             className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
-
                         >
                             Home
                         </NavLink>
@@ -40,7 +45,6 @@ const Navbar = () => {
                         <NavLink
                             to="/blog"
                             className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
-
                         >
                             Blogs
                         </NavLink>
@@ -49,16 +53,62 @@ const Navbar = () => {
                         <NavLink
                             to="/project"
                             className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
-
                         >
                             Projects
                         </NavLink>
                     </li>
+
+                    {/* Services Dropdown */}
+                    <li className="relative">
+                        <button
+                            onClick={toggleServices} // Toggle dropdown on click
+                            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105 focus:outline-none"
+                        >
+                            Services
+                        </button>
+                        {/* Dropdown Menu (Visible when isServicesOpen is true) */}
+                        {isServicesOpen && (
+                            <ul className="absolute bg-indigo-500 text-white mt-2 rounded-md shadow-lg z-20 space-y-2 p-4">
+                                <li>
+                                    <NavLink
+                                        to="/service/home-design"
+                                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
+                                    >
+                                        Home Design
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/service/office-design"
+                                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
+                                    >
+                                        Office Design
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/service/custom-furniture"
+                                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
+                                    >
+                                        Custom Furniture
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/service/consultations"
+                                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
+                                    >
+                                        Consultations
+                                    </NavLink>
+                                </li>
+                            </ul>
+                        )}
+                    </li>
+
                     <li>
                         <NavLink
                             to="/about"
                             className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
-
                         >
                             About Us
                         </NavLink>
@@ -67,7 +117,6 @@ const Navbar = () => {
                         <NavLink
                             to="/contact"
                             className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
-
                         >
                             Contact Us
                         </NavLink>
@@ -89,7 +138,6 @@ const Navbar = () => {
                         <NavLink
                             to="/"
                             className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
-
                             onClick={toggleMenu}
                         >
                             Home
@@ -99,7 +147,6 @@ const Navbar = () => {
                         <NavLink
                             to="/blog"
                             className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
-
                             onClick={toggleMenu}
                         >
                             Blogs
@@ -109,7 +156,6 @@ const Navbar = () => {
                         <NavLink
                             to="/project"
                             className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
-
                             onClick={toggleMenu}
                         >
                             Projects
@@ -119,7 +165,6 @@ const Navbar = () => {
                         <NavLink
                             to="/about"
                             className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
-
                             onClick={toggleMenu}
                         >
                             About Us
@@ -129,7 +174,6 @@ const Navbar = () => {
                         <NavLink
                             to="/contact"
                             className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
-
                             onClick={toggleMenu}
                         >
                             Contact Us

@@ -9,6 +9,12 @@ import Contact from './pages/Contact/Contact'
 import Blog from './pages/Blog/Blog'
 import Project from './pages/Project/Project'
 
+// SERVICES PAGES
+import HomeDesign from './pages/HomeDesign/HomeDesign'
+import OfficeDesign from './pages/OfficeDesign/OfficeDesign'
+import CustomFurniture from './pages/CustomFurniture/CustomFurniture'
+import Consultations from './pages/Consultations/Consultations'
+
 const App = () => {
   return (
     <>
@@ -18,6 +24,12 @@ const App = () => {
         <Route path='/contact' element={<Contact />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/project' element={<Project />} />
+
+        <Route path='/service/home-design' element={<HomeDesign />} />
+        <Route path='/service/office-design' element={<OfficeDesign />} />
+        <Route path='/service/custom-furniture' element={<CustomFurniture />} />
+        <Route path='/service/consultations' element={<Consultations />} />
+
       </Routes>
     </>
   )
