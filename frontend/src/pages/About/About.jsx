@@ -3,15 +3,6 @@ import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 
 const About = () => {
-  const handleMouseEnter = (e) => {
-    e.target.style.transform = "scale(1.1)";
-    e.target.style.color = "#f39c12";
-  };
-  
-  const handleMouseLeave = (e) => {
-    e.target.style.transform = "scale(1)";
-    e.target.style.color = "#fff";
-  };
   
   const teamMembers = [
     {
@@ -45,8 +36,6 @@ const About = () => {
   <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center banner-animation">
     <h1 
       className="text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-lg animate-float transition-transform duration-500 ease-in-out hover:scale-110 responsive-animation" 
-      onMouseEnter={handleMouseEnter} 
-      onMouseLeave={handleMouseLeave}
     >
       About Us
     </h1>

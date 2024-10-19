@@ -161,7 +161,7 @@ const Project = () => {
                     </div>
                     <div className="relative overflow-hidden rounded-lg shadow-lg group">
                         <img
-                            src="https://img.freepik.com/free-photo/interior-decoration-inspired-by-mexican-folklore_23-2150711269.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid"
+                            src="https://img.freepik.com/free-photo/interior-decoration-inspired-by-mexican-folklore_23-2150711385.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid"
                             alt="Project 12"
                             className="w-full h-64 object-cover transition-transform duration-300 transform group-hover:scale-110"
                         />

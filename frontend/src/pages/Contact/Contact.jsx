@@ -11,24 +11,16 @@ const Contact = () => {
       <Navbar />
       <br />
       <br />
-      <section
-        className="relative w-full h-96 md:h-[500px] lg:h-[600px] bg-fixed bg-cover bg-center"
-        style={{
-          backgroundImage: `url('https://img.freepik.com/free-photo/digital-lavender-style-interior-design_23-2151561236.jpg?uid=R167672705&ga=GA1.2.1165456550.1728109905&semt=ais_hybrid')`,
-        }}
-      >
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-70"></div>
-        {/* Banner Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-8 lg:px-16">
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide mb-4 animate-fade-in-up">
-            Get in Touch
-          </h1>
-          <p className="text-white text-lg md:text-xl lg:text-2xl mb-6 animate-fade-in-down">
-            We&apos;d love to hear from you!
-          </p>
-        </div>
-      </section>
+      <section className="relative w-full h-96 md:h-120 lg:h-[32rem] bg-cover bg-center" style={{ backgroundImage: `url('https://img.freepik.com/free-photo/traditional-house-interior-design_23-2151050973.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905')` }}>
+  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center banner-animation">
+    <h1 
+      className="text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-lg animate-float transition-transform duration-500 ease-in-out hover:scale-110 responsive-animation" 
+    >
+      Contact Us
+    </h1>
+  </div>
+</section>
+
 
       <div className="bg-white py-12 px-4">
         <div className="container mx-auto flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6">
