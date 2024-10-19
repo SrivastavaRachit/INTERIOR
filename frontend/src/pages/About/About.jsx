@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 
 const About = () => {
-  
+
   const teamMembers = [
     {
       name: 'Nichola Dickens',
@@ -32,15 +32,15 @@ const About = () => {
       <br />
 
       {/* Banner Section */}
-<section className="relative w-full h-96 md:h-120 lg:h-[32rem] bg-cover bg-center" style={{ backgroundImage: `url('https://img.freepik.com/free-photo/contemporary-house-interior-design_23-2151050946.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid')` }}>
-  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center banner-animation">
-    <h1 
-      className="text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-lg animate-float transition-transform duration-500 ease-in-out hover:scale-110 responsive-animation" 
-    >
-      About Us
-    </h1>
-  </div>
-</section>
+      <section className="relative w-full h-96 md:h-120 lg:h-[32rem] bg-cover bg-center" style={{ backgroundImage: `url('https://img.freepik.com/free-photo/contemporary-house-interior-design_23-2151050946.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid')` }}>
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center banner-animation">
+          <h1
+            className="text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-lg animate-float transition-transform duration-500 ease-in-out hover:scale-110 responsive-animation"
+          >
+            About Us
+          </h1>
+        </div>
+      </section>
 
 
 
@@ -57,8 +57,8 @@ const About = () => {
           <div className="w-full md:w-1/2 flex flex-col text-start">
             <h2 className="text-4xl font-bold px-6 mb-6">Our Mission</h2>
             <p className="text-gray-700 text-xl px-6 mb-4">
-              We are dedicated to transforming spaces into vibrant, functional works of art. 
-              Our mission is to create innovative designs that reflect our clients' unique styles and enhance their lifestyles. 
+              We are dedicated to transforming spaces into vibrant, functional works of art.
+              Our mission is to create innovative designs that reflect our clients' unique styles and enhance their lifestyles.
               Good design should not only be beautiful but also sustainable and practical.
             </p>
           </div>
@@ -66,24 +66,24 @@ const About = () => {
       </section>
 
       {/* Our Vision Section */}
-<section className="container mx-auto px-4 py-16">
-  <div className="flex flex-wrap items-center">
-    <div className="w-full md:w-1/2 flex flex-col text-start pr-10"> {/* Added pr-10 for padding-right */}
-      <h2 className="text-4xl font-bold px-9 mb-6">Our Vision</h2>
-      <p className="text-gray-700 px-9 text-xl mb-4">
-        Our vision is to create harmonious environments that inspire creativity and foster well-being. 
-        We strive to blend artistic expression with functional design, aiming to exceed our clients' expectations at every turn.
-      </p>
-    </div>
-    <div className="w-full md:w-1/2 flex justify-center mb-6">
-      <img
-        src="https://img.freepik.com/free-photo/modern-home-office-with-wooden-desk-large-window-city-view_9975-33105.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid"
-        alt="Vision Illustration"
-        className="w-full h-auto rounded-lg shadow-md max-w-2xl transition-transform duration-300 transform hover:scale-105"
-      />
-    </div>
-  </div>
-</section>
+      <section className="container mx-auto px-4 py-16">
+        <div className="flex flex-wrap items-center">
+          <div className="w-full md:w-1/2 flex flex-col text-start pr-10"> {/* Added pr-10 for padding-right */}
+            <h2 className="text-4xl font-bold px-9 mb-6">Our Vision</h2>
+            <p className="text-gray-700 px-9 text-xl mb-4">
+              Our vision is to create harmonious environments that inspire creativity and foster well-being.
+              We strive to blend artistic expression with functional design, aiming to exceed our clients' expectations at every turn.
+            </p>
+          </div>
+          <div className="w-full md:w-1/2 flex justify-center mb-6">
+            <img
+              src="https://img.freepik.com/free-photo/modern-home-office-with-wooden-desk-large-window-city-view_9975-33105.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid"
+              alt="Vision Illustration"
+              className="w-full h-auto rounded-lg shadow-md max-w-2xl transition-transform duration-300 transform hover:scale-105"
+            />
+          </div>
+        </div>
+      </section>
 
 
       {/* Enhanced Team Section */}
@@ -120,44 +120,44 @@ const About = () => {
       </section>
 
       {/* Additional Design Features */}
-<section className="container mx-auto px-4 py-12 bg-white rounded-lg shadow-lg">
-  <h2 className="text-4xl font-bold text-center mb-8">Why Choose Us?</h2>
-  <p className="text-gray-700 text-xl text-center mb-6">
-    Our commitment to excellence sets us apart. We focus on understanding your needs and delivering unparalleled service.
-  </p>
-  <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto text-gray-600 text-lg">
-    <li className="flex items-center space-x-4 fade-in-animation">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-      </svg>
-      <span>Customized Design Solutions</span>
-    </li>
-    <li className="flex items-center space-x-4 fade-in-animation">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-      </svg>
-      <span>Sustainable Practices</span>
-    </li>
-    <li className="flex items-center space-x-4 fade-in-animation">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-      </svg>
-      <span>Exceptional Customer Service</span>
-    </li>
-    <li className="flex items-center space-x-4 fade-in-animation">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-      </svg>
-      <span>Innovative Approaches</span>
-    </li>
-    <li className="flex items-center space-x-4 fade-in-animation">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-      </svg>
-      <span>Experienced and Passionate Team</span>
-    </li>
-  </ul>
-</section>
+      <section className="container mx-auto px-4 py-12 bg-white rounded-lg shadow-lg">
+        <h2 className="text-4xl font-bold text-center mb-8">Why Choose Us?</h2>
+        <p className="text-gray-700 text-xl text-center mb-6">
+          Our commitment to excellence sets us apart. We focus on understanding your needs and delivering unparalleled service.
+        </p>
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto text-gray-600 text-lg">
+          <li className="flex items-center space-x-4 fade-in-animation">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Customized Design Solutions</span>
+          </li>
+          <li className="flex items-center space-x-4 fade-in-animation">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Sustainable Practices</span>
+          </li>
+          <li className="flex items-center space-x-4 fade-in-animation">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Exceptional Customer Service</span>
+          </li>
+          <li className="flex items-center space-x-4 fade-in-animation">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Innovative Approaches</span>
+          </li>
+          <li className="flex items-center space-x-4 fade-in-animation">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Experienced and Passionate Team</span>
+          </li>
+        </ul>
+      </section>
 
 
       <Footer />

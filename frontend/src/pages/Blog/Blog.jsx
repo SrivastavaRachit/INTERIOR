@@ -6,9 +6,9 @@ import { FaCalendarAlt, FaUser } from 'react-icons/fa';
 
 
 const Blog = () => {
-    
+
     const blogPosts = [
-        
+
         {
             id: 1,
             title: 'Interior Design Inspiration and Ideas',
@@ -61,39 +61,38 @@ const Blog = () => {
 
     return (
         <>
-            <Navbar /> 
-            <br /> 
-            <br /> 
-              {/* Banner Section */}
-<section className="relative w-full h-96 md:h-120 lg:h-[32rem] bg-cover bg-center" style={{ backgroundImage: `url('https://img.freepik.com/free-photo/modern-styled-entryway_23-2150695915.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid')` }}>
-  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center banner-animation">
-    <h1 
-      className="text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-lg animate-float transition-transform duration-500 ease-in-out hover:scale-110 responsive-animation" 
-    >
-      Blog
-    </h1>
-  </div>
-</section>
-
-            
+            <Navbar />
             <br />
-            
+            <br />
+            {/* Banner Section */}
+            <section className="relative w-full h-96 md:h-120 lg:h-[32rem] bg-cover bg-center" style={{ backgroundImage: `url('https://img.freepik.com/free-photo/modern-styled-entryway_23-2150695915.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid')` }}>
+                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center banner-animation">
+                    <h1
+                        className="text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-lg animate-float transition-transform duration-500 ease-in-out hover:scale-110 responsive-animation"
+                    >
+                        Blog
+                    </h1>
+                </div>
+            </section>
+
+
+            <br />
+
             <div className="bg-white">
                 <div className="container mx-auto px-4">
                     <div className="grid gap-8">
                         {blogPosts.map((post, index) => (
-                            <div 
-                                key={post.id} 
-                                className={`bg-white rounded-lg overflow-hidden flex flex-col md:flex-row  transform transition duration-500 hover:scale-105 ${
-                                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                                }`}
+                            <div
+                                key={post.id}
+                                className={`bg-white rounded-lg overflow-hidden flex flex-col md:flex-row  transform transition duration-500 hover:scale-105 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                                    }`}
                             >
                                 {/* Separate div for the image */}
                                 <div className="md:w-1/2 overflow-hidden">
-                                    <img 
-                                        src={post.image} 
-                                        alt={post.title} 
-                                        className="w-full h-64 object-cover md:h-full hover:scale-110 transition-transform duration-300" 
+                                    <img
+                                        src={post.image}
+                                        alt={post.title}
+                                        className="w-full h-64 object-cover md:h-full hover:scale-110 transition-transform duration-300"
                                     />
                                 </div>
                                 {/* Content Box */}
@@ -122,7 +121,7 @@ const Blog = () => {
                     </div>
                 </div>
                 <br />
-                <br />                                     
+                <br />
                 <Footer />
             </div>
         </>
