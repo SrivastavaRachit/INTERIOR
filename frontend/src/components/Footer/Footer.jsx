@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { Link, NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -18,7 +19,7 @@ const Footer = () => {
         {/* Services Section */}
         <div className="w-full lg:w-1/4 space-y-3">
           <h4 className="text-xl font-semibold text-gradient mb-3">Services</h4>
-          <ul className="space-y-2">
+          <ul className="space-y-2 ">
             {['Home Design', 'Office Design', 'Custom Furniture', 'Consultations'].map((service, index) => (
               <li key={index}>
                 <a
@@ -35,15 +36,15 @@ const Footer = () => {
         {/* Get In Touch Section */}
         <div className="w-full lg:w-1/4 space-y-3">
           <h4 className="text-xl font-semibold text-gradient mb-3">Get In Touch</h4>
-          <p className="text-gray-400">Email: interiorimpression@gmail.com</p>
-          <p className="text-gray-400">Phone: (+92 224367957)</p>
+          <p className="text-gray-400">Email: hexagonsservices@gmail.com</p>
+          <p className="text-gray-400">Phone: (+91 8840775386)</p>
           {/* Social Media Links */}
           <div className="flex space-x-4 mt-6">
             {[
-              { icon: faFacebookF, link: "#" },
-              { icon: faTwitter, link: "#" },
-              { icon: faInstagram, link: "#" },
-              { icon: faLinkedinIn, link: "#" }
+              { icon: faFacebookF, link: "https://www.facebook.com/" },
+              { icon: faTwitter, link: "https://x.com/" },
+              { icon: faInstagram, link: "https://www.instagram.com/" },
+              { icon: faLinkedinIn, link: "https://in.linkedin.com/" }
             ].map((social, index) => (
               <a
                 key={index}
@@ -59,8 +60,8 @@ const Footer = () => {
         {/* Quick Links Section */}
         <div className="w-full lg:w-1/4 space-y-3">
           <h4 className="text-xl font-semibold text-gradient mb-3">Quick Links</h4>
-          <ul className="space-y-2">
-            {['About Us', 'Contact Us'].map((link, index) => (
+          <ul className="space-y-2 ">
+            {['Home','Blogs','Projects','About Us', 'Contact Us'].map((link, index) => (
               <li key={index}>
                 <a
                   href="#"
@@ -90,7 +91,14 @@ const Footer = () => {
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-700 mt-10 pt-6">
-        <p className="text-center text-gray-500 text-sm">&copy; 2024 Interior Impression. All Rights Reserved.</p>
+        <p className="text-center  text-gray-500 text-lg">&copy; 2024 Interior Impression.
+          <p className="text-center text-gray-500 text-lg"> All Rights Reserved.</p>
+          <a href="https://hexagondigitalservices.com/" target='blank'>Powered By {" "}
+          <span 
+          className='text-yellow-400 hover:text-blue-300 underline'>
+          Hexagon Digital Services
+            </span></a>
+          </p>
       </div>
     </footer>
   );

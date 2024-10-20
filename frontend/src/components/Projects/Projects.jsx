@@ -12,33 +12,41 @@ const Projects = () => {
 
     return (
         <section className="py-16 px-4 bg-gray-50">
-            <h2 className="text-3xl font-bold text-center mb-8">Our Latest Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Animated Heading */}
+            <motion.h2
+                className="text-3xl md:text-4xl font-bold text-center mb-8"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: 'easeInOut' }}
+            >
+                Our Latest Projects
+            </motion.h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {[
                     {
-                        imgSrc: 'https://img.freepik.com/free-photo/contemporary-house-interior-design_23-2151050945.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905',
-                        content: 'Modern and stylish living space with contemporary design elements.'
+                        imgSrc: 'https://img.freepik.com/free-photo/contemporary-house-interior-design_23-2151050945.jpg',
+                        content: 'Modern and stylish living space with contemporary design elements.',
                     },
                     {
-                        imgSrc: 'https://img.freepik.com/free-photo/traditional-house-interior-design_23-2151050971.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905',
-                        content: 'Traditional house interior with rich textures and warm colors.'
+                        imgSrc: 'https://img.freepik.com/free-photo/traditional-house-interior-design_23-2151050971.jpg',
+                        content: 'Traditional house interior with rich textures and warm colors.',
                     },
                     {
-                        imgSrc: 'https://img.freepik.com/free-photo/photorealistic-wooden-house-interior-with-timber-decor-furnishings_23-2151263555.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905',
-                        content: 'Photorealistic wooden house with natural furnishings.'
+                        imgSrc: 'https://img.freepik.com/free-photo/photorealistic-wooden-house-interior-with-timber-decor-furnishings_23-2151263555.jpg',
+                        content: 'Photorealistic wooden house with natural furnishings.',
                     },
                     {
-                        imgSrc: 'https://img.freepik.com/free-photo/atmospheric-woodland-imagery-living-room_1409-4728.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905',
-                        content: 'Atmospheric woodland-themed living room with a rustic vibe.'
+                        imgSrc: 'https://img.freepik.com/free-photo/atmospheric-woodland-imagery-living-room_1409-4728.jpg',
+                        content: 'Atmospheric woodland-themed living room with a rustic vibe.',
                     },
                     {
-                        imgSrc: 'https://img.freepik.com/free-photo/contemporary-house-interior-design_23-2151050932.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905',
-                        content: 'Modern house interior with sleek and minimalistic design.'
+                        imgSrc: 'https://img.freepik.com/free-photo/contemporary-house-interior-design_23-2151050932.jpg',
+                        content: 'Modern house interior with sleek and minimalistic design.',
                     },
                     {
-                        imgSrc: 'https://img.freepik.com/free-photo/contemporary-house-interior-design_23-2151050926.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905',
-                        content: 'Elegant interior design with a blend of contemporary and traditional elements.'
-                    }
+                        imgSrc: 'https://img.freepik.com/free-photo/contemporary-house-interior-design_23-2151050926.jpg',
+                        content: 'Elegant interior design with a blend of contemporary and traditional elements.',
+                    },
                 ].map((project, index) => (
                     <motion.div
                         key={index}
@@ -76,7 +84,7 @@ const Projects = () => {
                                     backfaceVisibility: 'hidden',
                                 }}
                             >
-                                <p className="text-gray-700 text-lg">{project.content}</p>
+                                <p className="text-gray-700 text-xl font-semibold">{project.content}</p>
                             </div>
                         </motion.div>
                     </motion.div>
