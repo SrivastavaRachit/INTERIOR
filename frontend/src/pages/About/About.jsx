@@ -5,7 +5,7 @@ import Footer from '../../components/Footer/Footer';
 const About = () => {
   const teamMembers = [
     {
-      name: 'Axita ',
+      name: 'Axita',
       role: 'Founder',
       description: 'Axita leads our team with a vision to transform spaces into functional art, inspiring everyone through bold and elegant designs.',
       image: 'https://img.freepik.com/free-photo/smiling-young-girl-pointing-right-side-isolated-white-wall-with-copy-space_141793-78944.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid',
@@ -65,15 +65,15 @@ const About = () => {
 
       {/* Our Vision Section */}
       <section className="container mx-auto px-4 py-16 fade-in-animation">
-        <div className="flex flex-wrap items-center">
-          <div className="w-full md:w-1/2 flex flex-col text-start pr-10">
-            <h2 className="text-4xl font-bold px-9 mb-6">Our Vision</h2>
-            <p className="text-gray-700 px-9 text-xl mb-4">
+        <div className="flex flex-wrap items-center md:flex-row flex-col-reverse">
+          <div className="w-full md:w-1/2 flex flex-col text-start pr-10 mt-6 md:mt-0">
+            <h2 className="text-4xl font-bold px-6 mb-6">Our Vision</h2>
+            <p className="text-gray-700 px-6 text-xl mb-4">
               Our vision is to create harmonious environments that inspire creativity and foster well-being.
               We strive to blend artistic expression with functional design, aiming to exceed our clients' expectations at every turn.
             </p>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center mb-6">
+          <div className="w-full md:w-1/2 flex justify-center">
             <img
               src="https://img.freepik.com/free-photo/modern-home-office-with-wooden-desk-large-window-city-view_9975-33105.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid"
               alt="Vision Illustration"
@@ -110,99 +110,65 @@ const About = () => {
         ))}
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="container mx-auto px-4 py-12 bg-white rounded-lg shadow-lg fade-in-animation">
-        <h2 className="text-4xl font-bold text-center mb-8">Why Choose Us?</h2>
-        <p className="text-gray-700 text-xl text-center mb-6">
+      {/* Why Choose Us Section */} 
+      <section className="container mx-auto px-4 py-12 bg-gradient-to-r from-amber-300 via-purple-500 to-pink-500 rounded-lg shadow-lg fade-in-animation">
+        <h2 className="text-4xl font-bold text-center mb-8 text-white">Why Choose Us?</h2>
+        <p className="text-white text-xl text-center mb-6 max-w-2xl mx-auto">
           Our commitment to excellence sets us apart. We focus on understanding your needs and delivering unparalleled service.
         </p>
 
         {/* Grid for tools and features */}
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto text-gray-600 text-lg">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto text-white text-lg">
           {/* Customized Design Solutions */}
-          <li className="flex flex-col items-center text-center fade-in-animation">
-            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mb-4 p-4 icon-animation">
-              <i className="fas fa-paint-brush text-blue-600 text-4xl"></i> {/* FontAwesome icon */}
+          <li className="flex flex-col items-center text-center fade-in-animation transform transition duration-300 hover:scale-105">
+            <div className="flex items-center justify-center h-20 w-20 rounded-full bg-blue-200 mb-4 p-5 icon-animation shadow-lg">
+              <i className="fas fa-paint-brush text-blue-700 text-5xl animate-bounce"></i> {/* Animated icon */}
             </div>
-            <span className="text-xl font-semibold">Customized Design Solutions</span>
+            <span className="text-2xl font-semibold">Customized Design Solutions</span>
           </li>
 
           {/* Sustainable Practices */}
-          <li className="flex flex-col items-center text-center fade-in-animation">
-            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-4 p-4 icon-animation">
-              <i className="fas fa-seedling text-green-600 text-4xl"></i>
+          <li className="flex flex-col items-center text-center fade-in-animation transform transition duration-300 hover:scale-105">
+            <div className="flex items-center justify-center h-20 w-20 rounded-full bg-green-200 mb-4 p-5 icon-animation shadow-lg">
+              <i className="fas fa-seedling text-green-700 text-5xl animate-spin"></i>
             </div>
-            <span className="text-xl font-semibold">Sustainable Practices</span>
+            <span className="text-2xl font-semibold">Sustainable Practices</span>
           </li>
 
           {/* Exceptional Customer Service */}
-          <li className="flex flex-col items-center text-center fade-in-animation">
-            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 mb-4 p-4 icon-animation">
-              <i className="fas fa-headset text-yellow-600 text-4xl"></i>
+          <li className="flex flex-col items-center text-center fade-in-animation transform transition duration-300 hover:scale-105">
+            <div className="flex items-center justify-center h-20 w-20 rounded-full bg-yellow-200 mb-4 p-5 icon-animation shadow-lg">
+              <i className="fas fa-headset text-yellow-700 text-5xl animate-pulse"></i>
             </div>
-            <span className="text-xl font-semibold">Exceptional Customer Service</span>
+            <span className="text-2xl font-semibold">Exceptional Customer Service</span>
           </li>
 
           {/* Innovative Approaches */}
-          <li className="flex flex-col items-center text-center fade-in-animation">
-            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 mb-4 p-4 icon-animation">
-              <i className="fas fa-lightbulb text-indigo-600 text-4xl"></i>
+          <li className="flex flex-col items-center text-center fade-in-animation transform transition duration-300 hover:scale-105">
+            <div className="flex items-center justify-center h-20 w-20 rounded-full bg-indigo-200 mb-4 p-5 icon-animation shadow-lg">
+              <i className="fas fa-lightbulb text-indigo-700 text-5xl animate-wiggle"></i> {/* Unique animation */}
             </div>
-            <span className="text-xl font-semibold">Innovative Approaches</span>
+            <span className="text-2xl font-semibold">Innovative Approaches</span>
           </li>
 
           {/* Experienced Team */}
-          <li className="flex flex-col items-center text-center fade-in-animation">
-            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-red-100 mb-4 p-4 icon-animation">
-              <i className="fas fa-users text-red-600 text-4xl"></i>
+          <li className="flex flex-col items-center text-center fade-in-animation transform transition duration-300 hover:scale-105">
+            <div className="flex items-center justify-center h-20 w-20 rounded-full bg-red-200 mb-4 p-5 icon-animation shadow-lg">
+              <i className="fas fa-users text-red-700 text-5xl animate-pulse"></i>
             </div>
-            <span className="text-xl font-semibold">Experienced and Passionate Team</span>
+            <span className="text-2xl font-semibold">Experienced and Passionate Team</span>
           </li>
 
           {/* Creative and Innovative Designs */}
-          <li className="flex flex-col items-center text-center fade-in-animation">
-            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-purple-100 mb-4 p-4 icon-animation">
-              <i className="fas fa-palette text-purple-600 text-4xl"></i>
+          <li className="flex flex-col items-center text-center fade-in-animation transform transition duration-300 hover:scale-105">
+            <div className="flex items-center justify-center h-20 w-20 rounded-full bg-purple-200 mb-4 p-5 icon-animation shadow-lg">
+              <i className="fas fa-palette text-purple-700 text-5xl animate-bounce"></i>
             </div>
-            <span className="text-xl font-semibold">Creative and Innovative Designs</span>
+            <span className="text-2xl font-semibold">Creative and Innovative Designs</span>
           </li>
         </ul>
       </section>
 
-      <style jsx>{`
-        /* Fade-in animation for icons and text */
-        .fade-in-animation {
-          opacity: 0;
-          animation: fadeInUp 1s forwards;
-        }
-        
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        /* Animation for icon scaling */
-        .icon-animation {
-          transition: transform 0.3s ease-in-out;
-        }
-
-        .icon-animation:hover {
-          transform: scale(1.2);
-        }
-
-        @media (min-width: 1024px) {
-          /* Larger screens responsive grid */
-          .grid-cols-3 {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-          }
-        }
-      `}</style>
 
       <Footer />
     </>

@@ -1,15 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneAlt, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { name, email, phone, subject, message } = formData;
+
+    const whatsappMessage = `*Contact Details*:%0A%0A*Name*: ${name}%0A*Email*: ${email}%0A*Phone*: ${phone}%0A*Subject*: ${subject}%0A*Message*: ${message}`;
+
+    const whatsappURL = `https://api.whatsapp.com/send?phone=918840775386&text=${whatsappMessage}`;
+
+    window.open(whatsappURL, '_blank');
+    toast.success('Message sent successfully!');
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 3000);
+  };
+
   return (
     <>
       <Navbar />
-      <br />
-      <br />
       <section
         className="relative w-full h-96 md:h-120 lg:h-[32rem] bg-cover bg-center"
         style={{
@@ -17,9 +45,7 @@ const Contact = () => {
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center banner-animation">
-          <h1
-            className="text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-lg animate-float transition-transform duration-500 ease-in-out hover:scale-110 responsive-animation"
-          >
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-lg animate-float hover:scale-110">
             Contact Us
           </h1>
         </div>
@@ -29,14 +55,14 @@ const Contact = () => {
         <div className="container mx-auto flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6">
           {/* Left Side - Contact Information */}
           <div className="w-full md:w-1/3 space-y-6">
-            {/* Contact Info Block */}
             {[
-              { icon: faPhoneAlt, label: "Phone Number", value: "+91 2345678972" },
-              { icon: faEnvelope, label: "Email Address", value: "interiorimpression@gmail.com" },
-              { icon: faMapMarkerAlt, label: "Location", value: "Aminabad, Lucknow" }
+              { icon: faPhoneAlt, label: "Phone Number", value: "+91 8840775386", link: "tel:+918840775386" },
+              { icon: faEnvelope, label: "Email Address", value: "hexagonsservices@gmail.com", link: "mailto:hexagonsservices@gmail.com" },
+              { icon: faMapMarkerAlt, label: "Location", value: "Aminabad, Lucknow", link: "#" }
             ].map((info, index) => (
-              <div
+              <a
                 key={index}
+                href={info.link}
                 className="bg-gray-100 shadow-lg rounded-lg p-6 flex items-center space-x-4 transition-transform transform hover:scale-105"
               >
                 <div className="flex items-center justify-center w-12 h-12 shadow-md bg-gray-200 rounded-full">
@@ -46,50 +72,71 @@ const Contact = () => {
                   <p className="text-lg font-medium">{info.label}</p>
                   <p className="text-black">{info.value}</p>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
 
           {/* Right Side - Contact Form */}
           <div className="w-full md:w-2/3">
-            <div className="bg-gray-100 rounded-lg p-8 shadow-lg relative hover:shadow-2xl transition-shadow duration-300">
+            <div className="bg-gray-100 rounded-lg p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <h2 className="text-2xl font-semibold mb-6 text-center text-gray-700">Send Us a Message</h2>
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
                   <input
                     type="text"
+                    name="name"
                     placeholder="Your Name"
-                    className="w-full md:w-1/2 p-4 border border-gray-300 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
+                    className="w-full md:w-1/2 p-4 border border-gray-400 rounded-md bg-gray-100"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                   />
                   <input
                     type="email"
+                    name="email"
                     placeholder="Email Address"
-                    className="w-full md:w-1/2 p-4 border border-gray-400 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
+                    className="w-full md:w-1/2 p-4 border border-gray-400 rounded-md bg-gray-100"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
-                <input
-                  type="text"
-                  placeholder="Phone Number"
-                  className="w-full p-4 border border-gray-400 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
-                />
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  className="w-full p-4 border border-gray-400 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
-                />
+                <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="Phone Number"
+                    className="w-full md:w-1/2 p-4 border border-gray-400 rounded-md bg-gray-100"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    className="w-full md:w-1/2 p-4 border border-gray-400 rounded-md bg-gray-100"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
                 <textarea
+                  name="message"
                   placeholder="Message"
-                  className="w-full p-4 border border-gray-400 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
+                  className="w-full p-4 border border-gray-400 rounded-md bg-gray-100"
                   rows="5"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                 />
-<button
-  className="w-1/2 md:w-1/3 lg:w-1/4 mx-auto block py-2 rounded-md bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-600 transition-transform duration-300 transform hover:scale-105 shadow-lg"
->
-  <FontAwesomeIcon icon={faEnvelope} className="mr-2" /> Send Message
-</button>
+                <button
+                  type="submit"
+                  className="w-1/2 md:w-1/3 lg:w-1/4 mx-auto block py-2 rounded-md bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold hover:scale-105"
+                >
+                  <FontAwesomeIcon icon={faEnvelope} className="mr-2" /> Send Message
+                </button>
               </form>
-              <div className="absolute top-0 left-0 w-24 h-24 bg-blue-300 opacity-30 rounded-full -z-10 animate-pulse"></div>
-              <div className="absolute bottom-0 right-0 w-32 h-32 bg-purple-300 opacity-30 rounded-full -z-10 animate-ping"></div>
             </div>
           </div>
         </div>
@@ -111,6 +158,7 @@ const Contact = () => {
         </section>
       </div>
       <Footer />
+      <ToastContainer />
     </>
   );
 };

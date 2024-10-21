@@ -65,7 +65,8 @@ const Blog = () => {
             <br />
             <br />
             {/* Banner Section */}
-            <section className="relative w-full h-96 md:h-120 lg:h-[32rem] bg-cover bg-center" style={{ backgroundImage: `url('https://img.freepik.com/free-photo/modern-styled-entryway_23-2150695915.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid')` }}>
+            <section className="relative w-full h-96 md:h-120 lg:h-[32rem] bg-cover bg-center"
+                    style={{ backgroundImage: `url('https://img.freepik.com/free-photo/modern-styled-entryway_23-2150695915.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid')` }}>
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center banner-animation">
                     <h1
                         className="text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-lg animate-float transition-transform duration-500 ease-in-out hover:scale-110 responsive-animation"
