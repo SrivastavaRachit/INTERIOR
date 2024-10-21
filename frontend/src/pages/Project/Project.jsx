@@ -10,17 +10,17 @@ const Project = () => {
             </div>
             <br />
             <br />
-          
-      {/* Banner Section */}
-<section className="relative w-full h-96 md:h-120 lg:h-[32rem] bg-cover bg-center" style={{ backgroundImage: `url('https://img.freepik.com/free-photo/modern-apartment-with-comfortable-sofa-decor-generated-by-ai_188544-38495.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid')` }}>
-  <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center banner-animation">
-    <h1 
-      className="text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-lg animate-float transition-transform duration-500 ease-in-out hover:scale-110 responsive-animation" 
-    >
-      Projects 
-    </h1>
-  </div>
-</section>
+
+            {/* Banner Section */}
+            <section className="relative w-full h-96 md:h-120 lg:h-[32rem] bg-cover bg-center" style={{ backgroundImage: `url('https://img.freepik.com/free-photo/modern-apartment-with-comfortable-sofa-decor-generated-by-ai_188544-38495.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid')` }}>
+                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center banner-animation">
+                    <h1
+                        className="text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-lg animate-float transition-transform duration-500 ease-in-out hover:scale-110 responsive-animation"
+                    >
+                        Projects
+                    </h1>
+                </div>
+            </section>
 
             {/* Project Gallery */}
             <div className="container mx-auto px-4 py-12">
@@ -146,7 +146,7 @@ const Project = () => {
                             <p className="text-sm">Warm and inviting interior with contemporary art.</p>
                         </div>
                     </div>
-                    
+
                     <div className="relative overflow-hidden rounded-lg shadow-lg group">
                         <img
                             src="https://img.freepik.com/free-photo/interior-decoration-inspired-by-mexican-folklore_23-2150711319.jpg?uid=R167672705&ga=GA1.1.1165456550.1728109905&semt=ais_hybrid"
