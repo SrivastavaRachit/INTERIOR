@@ -6,6 +6,7 @@ import Banner from '../../components/Banner/Banner';
 import Whatwedo from '../../components/Whatwedo/Whatwedo'
 import OurWork from '../../components/OurWork/OurWork';
 import Projects from '../../components/Projects/Projects';
+import MeetOurClients from '../../components/MeetOurClients/MeetOurClients';
 
 
 const Home = () => {
@@ -27,7 +28,11 @@ const Home = () => {
 
       {/* Our Work Section */}
       <OurWork />
-      
+
+      {/* Our Work Section */}
+      <MeetOurClients />
+
+
       {/* Footer */}
       <div>
         <Footer />

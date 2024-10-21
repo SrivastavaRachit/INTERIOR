@@ -108,12 +108,12 @@ const Blog = () => {
                                         <p className="text-gray-700 text-base mb-6">
                                             {post.content}
                                         </p>
-                                        <button
+                                        {/* <button
                                             onClick={() => navigate(`/blog/${post.id}`)}
                                             className="bg-blue-600 text-white text-base px-5 py-3 rounded hover:bg-blue-700 transition duration-300"
                                         >
                                             Read More
-                                        </button>
+                                        </button> */}
                                     </div>
                                 </div>
                             </div>

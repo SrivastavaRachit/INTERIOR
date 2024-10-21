@@ -17,15 +17,15 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-gradient-to-r from-indigo-500 to-purple-600 fixed top-0 w-full shadow-lg z-10">
+        <nav className="bg-white fixed top-0 w-full shadow-lg z-10">
             <div className="container mx-auto px-4 flex justify-between items-center h-16">
                 {/* Logo and Title */}
                 <div className="flex items-center">
-                    <div className="text-white text-3xl font-bold mr-2">
+                    {/* <div className="text-white text-3xl font-bold mr-2">
                         <img src="/path-to-logo.png" alt="logo" className="w-8 h-8 inline-block mr-2" />
-                    </div>
+                    </div> */}
                     <NavLink to='/'>
-                        <h1 className="text-white text-2xl font-semibold hover:text-yellow-400">
+                        <h1 className="text-black text-2xl font-semibold hover:text-yellow-400">
                             MyLogo
                         </h1>
                     </NavLink>
@@ -36,7 +36,7 @@ const Navbar = () => {
                     <li>
                         <NavLink
                             to="/"
-                            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
+                            className="text-black text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
                         >
                             Home
                         </NavLink>
@@ -44,7 +44,7 @@ const Navbar = () => {
                     <li>
                         <NavLink
                             to="/blog"
-                            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
+                            className="text-black text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
                         >
                             Blogs
                         </NavLink>
@@ -52,7 +52,7 @@ const Navbar = () => {
                     <li>
                         <NavLink
                             to="/project"
-                            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
+                            className="text-black text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
                         >
                             Projects
                         </NavLink>
@@ -62,7 +62,7 @@ const Navbar = () => {
                     <li className="relative">
                         <button
                             onClick={toggleServices} // Toggle dropdown on click
-                            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105 focus:outline-none"
+                            className="text-black text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105 focus:outline-none"
                         >
                             Services
                         </button>
@@ -108,7 +108,7 @@ const Navbar = () => {
                     <li>
                         <NavLink
                             to="/about"
-                            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
+                            className="text-black text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
                         >
                             About Us
                         </NavLink>
@@ -116,7 +116,7 @@ const Navbar = () => {
                     <li>
                         <NavLink
                             to="/contact"
-                            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
+                            className="text-black text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
                         >
                             Contact Us
                         </NavLink>
