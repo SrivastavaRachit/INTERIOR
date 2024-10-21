@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
-
+import { FaPaintBrush, FaSeedling, FaHeadset, FaLightbulb, FaUsers, FaPalette } from 'react-icons/fa';
 const About = () => {
   const teamMembers = [
     {
@@ -110,8 +110,9 @@ const About = () => {
         ))}
       </section>
 
-      {/* Why Choose Us Section */} 
-      <section className="container mx-auto px-4 py-12 bg-gradient-to-r from-amber-300 via-purple-500 to-pink-500 rounded-lg shadow-lg fade-in-animation">
+      {/* Why Choose Us Section */}
+      <section className="container mx-auto px-4 py-12 bg-gradient-to-r from-amber-300 via-teal-300 to-pink-500
+                rounded-lg shadow-lg fade-in-animation">
         <h2 className="text-4xl font-bold text-center mb-8 text-white">Why Choose Us?</h2>
         <p className="text-white text-xl text-center mb-6 max-w-2xl mx-auto">
           Our commitment to excellence sets us apart. We focus on understanding your needs and delivering unparalleled service.
@@ -122,7 +123,7 @@ const About = () => {
           {/* Customized Design Solutions */}
           <li className="flex flex-col items-center text-center fade-in-animation transform transition duration-300 hover:scale-105">
             <div className="flex items-center justify-center h-20 w-20 rounded-full bg-blue-200 mb-4 p-5 icon-animation shadow-lg">
-              <i className="fas fa-paint-brush text-blue-700 text-5xl animate-bounce"></i> {/* Animated icon */}
+              <FaPaintBrush className="text-blue-700 text-5xl" />
             </div>
             <span className="text-2xl font-semibold">Customized Design Solutions</span>
           </li>
@@ -130,7 +131,7 @@ const About = () => {
           {/* Sustainable Practices */}
           <li className="flex flex-col items-center text-center fade-in-animation transform transition duration-300 hover:scale-105">
             <div className="flex items-center justify-center h-20 w-20 rounded-full bg-green-200 mb-4 p-5 icon-animation shadow-lg">
-              <i className="fas fa-seedling text-green-700 text-5xl animate-spin"></i>
+              <FaSeedling className="text-green-700 text-5xl" />
             </div>
             <span className="text-2xl font-semibold">Sustainable Practices</span>
           </li>
@@ -138,7 +139,7 @@ const About = () => {
           {/* Exceptional Customer Service */}
           <li className="flex flex-col items-center text-center fade-in-animation transform transition duration-300 hover:scale-105">
             <div className="flex items-center justify-center h-20 w-20 rounded-full bg-yellow-200 mb-4 p-5 icon-animation shadow-lg">
-              <i className="fas fa-headset text-yellow-700 text-5xl animate-pulse"></i>
+              <FaHeadset className="text-yellow-700 text-5xl" />
             </div>
             <span className="text-2xl font-semibold">Exceptional Customer Service</span>
           </li>
@@ -146,7 +147,7 @@ const About = () => {
           {/* Innovative Approaches */}
           <li className="flex flex-col items-center text-center fade-in-animation transform transition duration-300 hover:scale-105">
             <div className="flex items-center justify-center h-20 w-20 rounded-full bg-indigo-200 mb-4 p-5 icon-animation shadow-lg">
-              <i className="fas fa-lightbulb text-indigo-700 text-5xl animate-wiggle"></i> {/* Unique animation */}
+              <FaLightbulb className="text-indigo-700 text-5xl" />
             </div>
             <span className="text-2xl font-semibold">Innovative Approaches</span>
           </li>
@@ -154,7 +155,7 @@ const About = () => {
           {/* Experienced Team */}
           <li className="flex flex-col items-center text-center fade-in-animation transform transition duration-300 hover:scale-105">
             <div className="flex items-center justify-center h-20 w-20 rounded-full bg-red-200 mb-4 p-5 icon-animation shadow-lg">
-              <i className="fas fa-users text-red-700 text-5xl animate-pulse"></i>
+              <FaUsers className="text-red-700 text-5xl" />
             </div>
             <span className="text-2xl font-semibold">Experienced and Passionate Team</span>
           </li>
@@ -162,7 +163,7 @@ const About = () => {
           {/* Creative and Innovative Designs */}
           <li className="flex flex-col items-center text-center fade-in-animation transform transition duration-300 hover:scale-105">
             <div className="flex items-center justify-center h-20 w-20 rounded-full bg-purple-200 mb-4 p-5 icon-animation shadow-lg">
-              <i className="fas fa-palette text-purple-700 text-5xl animate-bounce"></i>
+              <FaPalette className="text-purple-700 text-5xl" />
             </div>
             <span className="text-2xl font-semibold">Creative and Innovative Designs</span>
           </li>

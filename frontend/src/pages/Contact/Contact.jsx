@@ -54,16 +54,18 @@ const Contact = () => {
       <div className="bg-white py-12 px-4">
         <div className="container mx-auto flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6">
           {/* Left Side - Contact Information */}
-          <div className="w-full md:w-1/3 space-y-6">
+          <div className="w-full md:w-5/12 space-y-6">
             {[
               { icon: faPhoneAlt, label: "Phone Number", value: "+91 8840775386", link: "tel:+918840775386" },
-              { icon: faEnvelope, label: "Email Address", value: "hexagonsservices@gmail.com", link: "mailto:hexagonsservices@gmail.com" },
+              { icon: faEnvelope, label: "Email Address", value: "hexagonsservices@gmail.com", 
+              link: "mailto:hexagonsservices@gmail.com" },
               { icon: faMapMarkerAlt, label: "Location", value: "Aminabad, Lucknow", link: "#" }
             ].map((info, index) => (
               <a
                 key={index}
                 href={info.link}
-                className="bg-gray-100 shadow-lg rounded-lg p-6 flex items-center space-x-4 transition-transform transform hover:scale-105"
+                className="bg-gray-100 shadow-lg rounded-lg p-6 flex items-center
+                          space-x-4 transition-transform transform hover:scale-105"
               >
                 <div className="flex items-center justify-center w-12 h-12 shadow-md bg-gray-200 rounded-full">
                   <FontAwesomeIcon icon={info.icon} className="text-2xl text-gray-700" />

@@ -65,7 +65,7 @@ const Navbar = () => {
                         </button>
                         {/* Dropdown Menu (Animated with transition) */}
                         <div
-                            className={`absolute bg-indigo-500 text-white mt-2 rounded-md shadow-lg z-20 space-y-2 p-4 transition-all duration-500 ease-in-out transform ${
+                            className={`absolute bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 text-white mt-2 rounded-md shadow-lg z-20 space-y-2 p-4 transition-all duration-500 ease-in-out transform ${
                                 isServicesOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
                             }`}
                         >
@@ -154,6 +154,55 @@ const Navbar = () => {
                     >
                         Projects
                     </NavLink>
+                </li>
+                {/* Services Dropdown in Mobile Menu */}
+                <li>
+                    <button
+                        onClick={toggleServices}
+                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
+                    >
+                        Services
+                    </button>
+                    {isServicesOpen && (
+                        <ul className="space-y-2 bg-gray-800 p-3 rounded-md mt-2">
+                            <li>
+                                <NavLink
+                                    to="/service/home-design"
+                                    className="block text-lg text-white hover:text-yellow-400"
+                                    onClick={toggleMenu}
+                                >
+                                    Home Design
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to="/service/office-design"
+                                    className="block text-lg text-white hover:text-yellow-400"
+                                    onClick={toggleMenu}
+                                >
+                                    Office Design
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to="/service/custom-furniture"
+                                    className="block text-lg text-white hover:text-yellow-400"
+                                    onClick={toggleMenu}
+                                >
+                                    Custom Furniture
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to="/service/consultations"
+                                    className="block text-lg text-white hover:text-yellow-400"
+                                    onClick={toggleMenu}
+                                >
+                                    Consultations
+                                </NavLink>
+                            </li>
+                        </ul>
+                    )}
                 </li>
                 <li>
                     <NavLink
