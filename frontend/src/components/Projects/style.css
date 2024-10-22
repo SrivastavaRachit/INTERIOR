@@ -1,0 +1,27 @@
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.slide-track {
+    display: flex;
+    width: calc(320px * 12); /* Width of the cards x 2 sets of cards */
+    animation: scroll 10s linear infinite; /* Adjust the duration for speed */
+}
+
+.pause {
+    animation-play-state: paused; /* Pauses the animation when hovered */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;      /* Firefox */
+}
