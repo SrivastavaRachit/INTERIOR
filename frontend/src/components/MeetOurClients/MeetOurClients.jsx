@@ -11,6 +11,9 @@ const clients = [
     { icon: '🚪', title: 'Doors & Windows', tagline: 'Elegant Openings' },
     { icon: '🔨', title: 'Renovation', tagline: 'Revamping Spaces' },
     { icon: '🖥️', title: 'Technology', tagline: 'Smart Solutions' },
+    { icon: '🛠️', title: 'DIY Projects', tagline: 'Create Your Own' },
+    { icon: '💡', title: 'Lighting', tagline: 'Illuminate Your Space' },
+
 ];
 
 const MeetOurClients = () => {

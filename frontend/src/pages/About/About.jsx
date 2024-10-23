@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import { FaPaintBrush, FaSeedling, FaHeadset, FaLightbulb, FaUsers, FaPalette } from 'react-icons/fa';
 const About = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
+
   const teamMembers = [
     {
       name: 'Axita',

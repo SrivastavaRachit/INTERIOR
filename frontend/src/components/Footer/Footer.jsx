@@ -74,20 +74,21 @@ const Footer = () => {
           {/* Social Media Links */}
           <div className="flex space-x-4 mt-6">
             {[
-              { icon: faFacebookF, link: "https://www.facebook.com/" },
-              { icon: faTwitter, link: "https://x.com/" },
-              { icon: faInstagram, link: "https://www.instagram.com/" },
-              { icon: faLinkedinIn, link: "https://in.linkedin.com/" }
+              { icon: faFacebookF, link: "https://www.facebook.com/", colorClass: "text-blue-600 hover:text-blue-400" },
+              { icon: faTwitter, link: "https://x.com/", colorClass: "text-lightblue-600 hover:text-lightblue-400" },
+              { icon: faInstagram, link: "https://www.instagram.com/", colorClass: "text-red-600 hover:text-red-400" },
+              { icon: faLinkedinIn, link: "https://in.linkedin.com/", colorClass: "text-blue-800 hover:text-blue-600" }
             ].map((social, index) => (
               <a
                 key={index}
                 href={social.link}
-                className="text-gray-400 hover:text-purple-400 transition-transform duration-300 transform hover:scale-125"
+                className={`transition-transform duration-300 transform hover:scale-125 ${social.colorClass}`}
               >
                 <FontAwesomeIcon icon={social.icon} size="lg" />
               </a>
             ))}
           </div>
+
         </div>
 
         {/* Quick Links Section */}
@@ -164,11 +165,11 @@ const Footer = () => {
         <p className="text-center  text-gray-500 text-lg">&copy; 2024 Interior Impression.
           <p className="text-center text-gray-500 text-lg"> All Rights Reserved.</p>
           <a href="https://hexagondigitalservices.com/" target='blank'>Powered By {" "}
-          <span 
-          className='text-yellow-400 hover:text-blue-300 underline'>
-          Hexagon Digital Services
+            <span
+              className='text-yellow-400 hover:text-blue-300 underline'>
+              Hexagon Digital Services
             </span></a>
-          </p>
+        </p>
       </div>
     </footer>
   );

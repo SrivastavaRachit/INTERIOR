@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 
 const CustomFurniture = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <div>
@@ -18,7 +23,7 @@ const CustomFurniture = () => {
                         <h1
                             className="text-white text-4xl md:text-5xl lg:text-6xl font-bold shadow-lg animate-float transition-transform duration-500 ease-in-out hover:scale-110 responsive-animation"
                         >
-                            Customer Furniture
+                            Custom Furniture
                         </h1>
                     </div>
                 </section>

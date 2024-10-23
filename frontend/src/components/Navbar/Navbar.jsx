@@ -17,12 +17,12 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-white fixed top-0 w-full shadow-lg z-10">
+        <nav className="bg-gradient-to-r from-indigo-600 to-purple-600 fixed top-0 w-full shadow-lg z-10 transition duration-300 ease-in-out">
             <div className="container mx-auto px-4 flex justify-between items-center h-16">
                 {/* Logo and Title */}
                 <div className="flex items-center">
                     <NavLink to='/'>
-                        <h1 className="text-black text-2xl font-semibold hover:text-yellow-400">
+                        <h1 className="text-white text-2xl font-semibold hover:text-yellow-400 transition duration-300 transform hover:scale-105">
                             Interior Designer
                         </h1>
                     </NavLink>
@@ -33,7 +33,7 @@ const Navbar = () => {
                     <li>
                         <NavLink
                             to="/"
-                            className="text-black text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
+                            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
                         >
                             Home
                         </NavLink>
@@ -41,7 +41,7 @@ const Navbar = () => {
                     <li>
                         <NavLink
                             to="/blog"
-                            className="text-black text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
+                            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
                         >
                             Blogs
                         </NavLink>
@@ -49,7 +49,7 @@ const Navbar = () => {
                     <li>
                         <NavLink
                             to="/project"
-                            className="text-black text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
+                            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
                         >
                             Projects
                         </NavLink>
@@ -59,7 +59,7 @@ const Navbar = () => {
                     <li className="relative">
                         <button
                             onClick={toggleServices} // Toggle dropdown on click
-                            className="text-black text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105 focus:outline-none"
+                            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105 focus:outline-none"
                         >
                             Services
                         </button>
@@ -99,7 +99,7 @@ const Navbar = () => {
                     <li>
                         <NavLink
                             to="/about"
-                            className="text-black text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
+                            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
                         >
                             About Us
                         </NavLink>
@@ -107,7 +107,7 @@ const Navbar = () => {
                     <li>
                         <NavLink
                             to="/contact"
-                            className="text-black text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
+                            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:scale-105"
                         >
                             Contact Us
                         </NavLink>
@@ -116,22 +116,22 @@ const Navbar = () => {
 
                 {/* Hamburger Menu for small screens */}
                 <div className="md:hidden">
-                    <button onClick={toggleMenu} className="text-black focus:outline-none">
+                    <button onClick={toggleMenu} className="text-white focus:outline-none">
                         {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
                     </button>
                 </div>
             </div>
 
             {/* Mobile Menu (Slide in/out animation) */}
-            <div
-                className={`md:hidden bg-indigo-500 text-white space-y-4 p-4 absolute top-16 left-0 w-full transition-all duration-500 ease-in-out transform ${
+            <ul
+                className={`list-none md:hidden bg-gradient-to-b from-indigo-500 to-purple-500 text-white space-y-4 p-6 absolute top-16 left-0 w-full transition-all duration-500 ease-in-out transform rounded-b-lg shadow-2xl ${
                     isOpen ? 'translate-x-0' : '-translate-x-full'
                 }`}
             >
                 <li>
                     <NavLink
                         to="/"
-                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
+                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:translate-x-2"
                         onClick={toggleMenu}
                     >
                         Home
@@ -140,7 +140,7 @@ const Navbar = () => {
                 <li>
                     <NavLink
                         to="/blog"
-                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
+                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:translate-x-2"
                         onClick={toggleMenu}
                     >
                         Blogs
@@ -149,7 +149,7 @@ const Navbar = () => {
                 <li>
                     <NavLink
                         to="/project"
-                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
+                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:translate-x-2"
                         onClick={toggleMenu}
                     >
                         Projects
@@ -164,11 +164,11 @@ const Navbar = () => {
                         Services
                     </button>
                     {isServicesOpen && (
-                        <ul className="space-y-2 bg-gray-800 p-3 rounded-md mt-2">
+                        <ul className="space-y-2 bg-gray-800 p-3 rounded-md mt-2 shadow-lg">
                             <li>
                                 <NavLink
                                     to="/service/home-design"
-                                    className="block text-lg text-white hover:text-yellow-400"
+                                    className="block text-lg text-white hover:text-yellow-400 transition duration-300"
                                     onClick={toggleMenu}
                                 >
                                     Home Design
@@ -177,7 +177,7 @@ const Navbar = () => {
                             <li>
                                 <NavLink
                                     to="/service/office-design"
-                                    className="block text-lg text-white hover:text-yellow-400"
+                                    className="block text-lg text-white hover:text-yellow-400 transition duration-300"
                                     onClick={toggleMenu}
                                 >
                                     Office Design
@@ -186,7 +186,7 @@ const Navbar = () => {
                             <li>
                                 <NavLink
                                     to="/service/custom-furniture"
-                                    className="block text-lg text-white hover:text-yellow-400"
+                                    className="block text-lg text-white hover:text-yellow-400 transition duration-300"
                                     onClick={toggleMenu}
                                 >
                                     Custom Furniture
@@ -195,7 +195,7 @@ const Navbar = () => {
                             <li>
                                 <NavLink
                                     to="/service/consultations"
-                                    className="block text-lg text-white hover:text-yellow-400"
+                                    className="block text-lg text-white hover:text-yellow-400 transition duration-300"
                                     onClick={toggleMenu}
                                 >
                                     Consultations
@@ -207,7 +207,7 @@ const Navbar = () => {
                 <li>
                     <NavLink
                         to="/about"
-                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
+                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:translate-x-2"
                         onClick={toggleMenu}
                     >
                         About Us
@@ -216,13 +216,13 @@ const Navbar = () => {
                 <li>
                     <NavLink
                         to="/contact"
-                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300"
+                        className="block text-lg font-medium hover:text-yellow-400 transition duration-300 transform hover:translate-x-2"
                         onClick={toggleMenu}
                     >
                         Contact Us
                     </NavLink>
                 </li>
-            </div>
+            </ul>
         </nav>
     );
 };
