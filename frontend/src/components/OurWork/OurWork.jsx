@@ -41,10 +41,22 @@ const OurWork = () => {
         },
     ];
 
-    const itemsToShow = 4; // Number of images to show at once
     const totalItems = works.length;
 
-    // Function to handle next and prev buttons
+    // Set itemsToShow based on screen size
+    const getItemsToShow = () => {
+        if (window.innerWidth >= 1280) return 4; // Show 4 items for large screens (desktop)
+        if (window.innerWidth >= 768) return 3; // Show 3 items for medium screens (tablets)
+        return 2; // Show 2 items for small screens (mobile)
+    };
+
+    const [itemsToShow, setItemsToShow] = useState(getItemsToShow);
+
+    // Update itemsToShow on window resize
+    window.addEventListener('resize', () => {
+        setItemsToShow(getItemsToShow());
+    });
+
     const nextSlide = () => {
         setCurrentIndex((prevIndex) =>
             (prevIndex + itemsToShow) % totalItems
@@ -58,7 +70,7 @@ const OurWork = () => {
     };
 
     return (
-        <section className="py-16 px-4 bg-gray-50">
+        <section className="py-12 md:py-16 px-4 bg-gray-50">
             {/* Animated Heading with lines on both sides */}
             <motion.div
                 className="flex flex-col items-center mb-8"
@@ -68,20 +80,19 @@ const OurWork = () => {
             >
                 <div className="flex items-center justify-center space-x-2">
                     {/* Bold Lines on Both Sides */}
-                    <span className="block w-16 h-1  bg-black"></span>
-                    <h2 className="text-3xl  md:text-4xl font-bold text-center mx-4">Our Work</h2>
-                    <span className="block w-16 h-1 bg-black"></span>
+                    <span className="block w-12 h-1 bg-black"></span>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mx-4">Our Work</h2>
+                    <span className="block w-12 h-1 bg-black"></span>
                 </div>
             </motion.div>
 
             {/* Swiper Container */}
             <div className="relative overflow-hidden">
-                <div className="flex py-9 space-x-4">
-                    {/* Show 4 images at once */}
+                <div className="flex space-x-4 py-8">
                     {works.slice(currentIndex, currentIndex + itemsToShow).map((work, index) => (
                         <motion.div
                             key={index}
-                            className="w-1/4 flex-shrink-0"
+                            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0"
                             initial={{ opacity: 0, x: 100 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -100 }}
@@ -90,12 +101,12 @@ const OurWork = () => {
                             <motion.img
                                 src={work.imgSrc}
                                 alt={work.title}
-                                className="w-full h-64 object-cover rounded-lg shadow-lg"
+                                className="w-full h-48 sm:h-64 object-cover rounded-lg shadow-lg"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.3 }}
                             />
                             <div className="text-center mt-4">
-                                <h3 className="text-xl font-semibold animate-bounce text-black">
+                                <h3 className="text-lg sm:text-xl font-semibold text-black">
                                     {work.title}
                                 </h3>
                             </div>
@@ -103,25 +114,11 @@ const OurWork = () => {
                     ))}
                 </div>
 
-                {/* Centered Prev and Next Buttons Positioned Below the Center */}
-                <div className="absolute -bottom-8 left-0 right-0 flex justify-center items-center py-9 space-x-4">
-                    <button
-                        onClick={prevSlide}
-                        className="bg-gray-800 text-white rounded-full p-3 focus:outline-none hover:bg-gray-600 transition-transform transform hover:scale-110"
-                    >
-                        <FaArrowLeft />
-                    </button>
-                    <button
-                        onClick={nextSlide}
-                        className="bg-gray-800 text-white rounded-full p-3 focus:outline-none hover:bg-gray-600 transition-transform transform hover:scale-110"
-                    >
-                        <FaArrowRight />
-                    </button>
-                </div>
+                {/* Prev and Next Buttons */}
             </div>
 
-            {/* Responsive navigation: shows position with dots */}
-            {/* <div className="flex justify-center space-x-2 mt-12">
+            {/* Navigation Dots */}
+            <div className="flex justify-center space-x-2 mt-8">
                 {Array.from({ length: Math.ceil(totalItems / itemsToShow) }).map((_, index) => (
                     <span
                         key={index}
@@ -133,7 +130,7 @@ const OurWork = () => {
                         }`}
                     ></span>
                 ))}
-            </div> */}
+            </div>
         </section>
     );
 };

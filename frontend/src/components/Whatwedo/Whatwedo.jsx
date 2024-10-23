@@ -15,43 +15,46 @@ const Whatwedo = () => {
                         <div className="flex-grow border-t-4 border-gray-800 max-w-[50px]" />
                     </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                    {/* Left Side: Image */}
-                    <div className="w-full">
+                
+                {/* Flex Container for Responsive Layout */}
+                <div className="flex flex-col md:flex-row justify-between items-start md:gap-8 gap-4">
+                    {/* Centered Image for Tablet View */}
+                    <div className="w-full md:w-5/12 mb-8">
                         <img
                             src="https://img.freepik.com/free-photo/cozy-lively-home-interior-design_23-2151119032.jpg"
                             alt="What We Do"
-                            className="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                            className="w-full h-auto object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
                         />
                     </div>
-                    {/* Right Side: Content */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 py-3">
+                    
+                    {/* Description Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:w-7/12 px-4 md:px-0 py-3">
                         {/* Each service box */}
-                        <div className="border p-4 md:p-6 rounded-lg shadow-md bg-gray-200 transition-colors duration-300 transform hover:-translate-y-2 hover:scale-105 min-h-[250px] flex flex-col items-center">
-                            <FaPencilRuler className="text-4xl text-blue-500 mb-4" />
-                            <h3 className="text-xl font-bold mb-2">Planning</h3>
-                            <p className="text-black text-lg text-center">
+                        <div className="border p-4 md:p-6 rounded-lg shadow-lg bg-gradient-to-br from-blue-200 to-blue-500 transition-all duration-300 transform hover:shadow-2xl hover:-translate-y-2 flex flex-col items-center">
+                            <FaPencilRuler className="text-4xl md:text-5xl text-blue-700 mb-4" />
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-white text-center">Planning</h3>
+                            <p className="text-white text-sm sm:text-base md:text-lg text-center">
                                 We help you plan the layout and design to match your preferences and lifestyle.
                             </p>
                         </div>
-                        <div className="border p-4 md:p-6 rounded-lg shadow-lg bg-gray-200 transition-colors duration-300 transform hover:-translate-y-2 hover:scale-105 min-h-[250px] flex flex-col items-center">
-                            <FaCouch className="text-4xl text-green-500 mb-4" />
-                            <h3 className="text-xl font-bold mb-2">Interior</h3>
-                            <p className="text-black text-lg text-center">
+                        <div className="border p-4 md:p-6 rounded-lg shadow-lg bg-gradient-to-br from-green-200 to-green-500 transition-all duration-300 transform hover:shadow-2xl hover:-translate-y-2 flex flex-col items-center">
+                            <FaCouch className="text-4xl md:text-5xl text-green-700 mb-4" />
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-white text-center">Interior</h3>
+                            <p className="text-white text-sm sm:text-base md:text-lg text-center">
                                 Our interior design services bring elegance and functionality to your space.
                             </p>
                         </div>
-                        <div className="border p-4 md:p-6 rounded-lg shadow-md bg-gray-200 transition-colors duration-300 transform hover:-translate-y-2 hover:scale-105 min-h-[250px] flex flex-col items-center">
-                            <FaTree className="text-4xl text-yellow-500 mb-4" />
-                            <h3 className="text-xl font-bold mb-2">Exterior</h3>
-                            <p className="text-black text-lg text-center">
-                                Our interior design services focus on transforming your space.
+                        <div className="border p-4 md:p-6 rounded-lg shadow-lg bg-gradient-to-br from-yellow-200 to-yellow-500 transition-all duration-300 transform hover:shadow-2xl hover:-translate-y-2 flex flex-col items-center">
+                            <FaTree className="text-4xl md:text-5xl text-yellow-700 mb-4" />
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-white text-center">Exterior</h3>
+                            <p className="text-white text-sm sm:text-base md:text-lg text-center">
+                                We focus on transforming your outdoor space into something beautiful.
                             </p>
                         </div>
-                        <div className="border p-4 md:p-6 rounded-lg shadow-md bg-gray-200 transition-colors duration-300 transform hover:-translate-y-2 hover:scale-105 min-h-[250px] flex flex-col items-center">
-                            <FaPaintBrush className="text-4xl text-red-500 mb-4" />
-                            <h3 className="text-xl font-bold mb-2">Decoration</h3>
-                            <p className="text-black text-lg text-center">
+                        <div className="border p-4 md:p-6 rounded-lg shadow-lg bg-gradient-to-br from-red-200 to-red-500 transition-all duration-300 transform hover:shadow-2xl hover:-translate-y-2 flex flex-col items-center">
+                            <FaPaintBrush className="text-4xl md:text-5xl text-red-700 mb-4" />
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-white text-center">Decoration</h3>
+                            <p className="text-white text-sm sm:text-base md:text-lg text-center">
                                 Our decoration services add finishing touches to create a complete look.
                             </p>
                         </div>

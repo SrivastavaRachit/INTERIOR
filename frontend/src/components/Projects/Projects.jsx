@@ -34,13 +34,12 @@ const Projects = () => {
         },
     ];
 
-    // Handle card click to display content
     const handleCardClick = (index) => {
         setSelectedCard(selectedCard === index ? null : index);
     };
 
     return (
-        <section className="py-16 px-4 bg-gray-200 relative">
+        <section className="py-16 px-4 bg-gray-200 relative overflow-x-hidden">
             {/* Blurred edges on left and right sides */}
             <div className="absolute top-0 left-0 bottom-0 w-16 bg-gradient-to-r from-gray-200 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute top-0 right-0 bottom-0 w-16 bg-gradient-to-l from-gray-200 to-transparent z-10 pointer-events-none"></div>
@@ -59,16 +58,19 @@ const Projects = () => {
 
             {/* Scrollable container */}
             <div
-                className={`flex overflow-hidden space-x-6 px-4 py-4 slide-track no-scrollbar ${isHovered ? 'pause' : ''}`}
+                className={`flex overflow-hidden space-x-6 py-4 px-4 md:px-8 slide-track no-scrollbar 
+                ${isHovered || selectedCard !== null ? 'pause' : ''}`}
                 ref={scrollRef}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
+                onTouchStart={() => setIsHovered(true)}  /* Pause on mobile touch */
+                onTouchEnd={() => setIsHovered(false)}   /* Resume on touch end */
             >
                 {/* Duplicate the cards to create an infinite scroll illusion */}
                 {projects.concat(projects).map((project, index) => (
                     <motion.div
                         key={index}
-                        className={`relative bg-white rounded-lg shadow-md hover:shadow-xl overflow-hidden cursor-pointer transition-all duration-500 transform w-80 ${
+                        className={`relative bg-white rounded-lg shadow-md hover:shadow-xl overflow-hidden cursor-pointer transition-all duration-500 transform w-64 sm:w-80 ${
                             selectedCard === index ? 'scale-105' : 'scale-100 opacity-75'
                         }`}
                         onClick={() => handleCardClick(index)}
@@ -82,7 +84,8 @@ const Projects = () => {
 
                         {/* Show content only when clicked */}
                         {selectedCard === index && (
-                            <div className="absolute inset-0 bg-gray-700 bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
+                            <div className="absolute inset-0 bg-gray-700 bg-opacity-50 flex 
+                            items-center justify-center transition-opacity duration-300">
                                 <p className="text-white text-xl text-center px-4">
                                     {project.content}
                                 </p>

@@ -23,19 +23,21 @@ const MeetOurClients = () => {
                     <h2 className="text-3xl font-bold mx-4">Meet Our Clients</h2>
                     <span className="block w-16 h-1 bg-black"></span>
                 </div>
-                <p className="mt-4 text-xl text-black">Our esteemed clients trust us to deliver outstanding projects.</p>
+                <p className="mt-4 text-lg md:text-xl text-black">
+                    Our esteemed clients trust us to deliver outstanding projects.
+                </p>
             </div>
 
             {/* Client Icons Section */}
-            <div className="flex flex-wrap justify-center gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8">
                 {clients.map((client, index) => (
                     <div
                         key={index}
-                        className="w-1/4 md:w-1/6 text-center p-4 hover:shadow-xl hover:bg-white rounded-lg transition-shadow duration-300"
+                        className="text-center p-4 hover:shadow-xl hover:bg-white rounded-lg transition-shadow duration-300"
                     >
-                        <div className="text-5xl mb-4">{client.icon}</div>
-                        <h3 className="text-lg font-bold">{client.title}</h3>
-                        <p className="text-gray-700 text-md">{client.tagline}</p>
+                        <div className="text-4xl mb-4">{client.icon}</div>
+                        <h3 className="text-md sm:text-lg font-bold">{client.title}</h3>
+                        <p className="text-gray-700 text-sm sm:text-md">{client.tagline}</p>
                     </div>
                 ))}
             </div>

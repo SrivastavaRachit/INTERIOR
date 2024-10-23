@@ -14,7 +14,7 @@
 }
 
 .pause {
-    animation-play-state: paused; /* Pauses the animation when hovered */
+    animation-play-state: paused; /* Pauses the animation when hovered or clicked */
 }
 
 .no-scrollbar::-webkit-scrollbar {
